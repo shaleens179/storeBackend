@@ -53,7 +53,7 @@ const SearchAndFilter = ({ filters, onFiltersChange, onSearch }) => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/plants/categories/all');
+      const response = await fetch('https://plantstore-6qkd.onrender.com/api/plants/categories/all');
       if (response.ok) {
         const data = await response.json();
         setCategories(data.data || []);

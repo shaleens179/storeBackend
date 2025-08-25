@@ -285,7 +285,7 @@ function App() {
       if (filters.sortBy) queryParams.append('sortBy', filters.sortBy);
       if (filters.sortOrder) queryParams.append('sortOrder', filters.sortOrder);
 
-      const response = await fetch(`http://localhost:5001/api/plants?${queryParams}`);
+      const response = await fetch(`https://plantstore-6qkd.onrender.com/api/plants?${queryParams}`);
       if (!response.ok) throw new Error('Failed to fetch plants');
       
       const data = await response.json();
@@ -304,7 +304,7 @@ function App() {
 
   const handleAddPlant = async (plantData) => {
     try {
-      const response = await fetch('http://localhost:5001/api/plants', {
+      const response = await fetch('https://plantstore-6qkd.onrender.com/api/plants', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
